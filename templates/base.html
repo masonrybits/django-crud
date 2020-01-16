@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+  <head>
+    <title>Book App</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>Book App</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'new' %}">Add Book</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
